@@ -17,8 +17,8 @@ class CPU {
     CPU("Intel i3-10100", 65),
     CPU("Intel i5-11400", 85),
     CPU("Intel i7-12700K", 125),
-    CPU("AMD Ryzen 5 3600", 65),
-    CPU("AMD Ryzen 7 5800X", 105),
+    CPU("AMD Ryzen 5 5600X", 65),
+    CPU("AMD Ryzen 9 5900X", 105),
   ];
 }
 
@@ -26,16 +26,17 @@ class GPU {
   final String model;
   final int wattage;
 
-  GPU({
-    required this.model,
-    required this.wattage,
-  });
+  GPU(
+    this.model,
+    this.wattage,
+  );
 
   static List<GPU> models = [
-    GPU(model: "GTX 1650", wattage: 75),
-    GPU(model: "RTX 3060", wattage: 170),
-    GPU(model: "RTX 4070", wattage: 200),
-    GPU(model: "RX 6600 XT", wattage: 160),
+    GPU("NVIDIA GeForce GT 1060", 50),
+    GPU("AMD Radeon RX 6500 XT", 107),
+    GPU("NVIDIA GeForce RTX 3060", 170),
+    GPU("AMD Radeon RX 6800", 250),
+    GPU("NVIDIA GeForce RTX 4090", 450),
   ];
 
   @override
@@ -48,15 +49,17 @@ class RAM {
   final String model;
   final int wattage;
 
-  RAM({
-    required this.model,
-    required this.wattage,
-  });
+  RAM(
+    this.model,
+    this.wattage,
+  );
 
   static List<RAM> models = [
-    RAM(model: "8GB DDR4", wattage: 3),
-    RAM(model: "16GB DDR4", wattage: 5),
-    RAM(model: "32GB DDR5", wattage: 8),
+    RAM("8GB DDR4-2400", 3),
+    RAM("16GB DDR4-3200", 5),
+    RAM("16GB DDR4-3600", 7),
+    RAM("32GB DDR4-3600", 9),
+    RAM("32GB DDR4-4000", 12),
   ];
 
   @override
@@ -69,15 +72,14 @@ class Storage {
   final String model;
   final int wattage;
 
-  Storage({
-    required this.model,
-    required this.wattage,
-  });
+  Storage(this.model, this.wattage);
 
   static List<Storage> models = [
-    Storage(model: "1TB HDD", wattage: 7),
-    Storage(model: "500GB SSD", wattage: 3),
-    Storage(model: "1TB NVMe SSD", wattage: 5),
+    Storage("SATA HDD (2TB)", 6),
+    Storage("SATA SSD (500GB)", 2),
+    Storage("NVMe SSD (1TB)", 5),
+    Storage("M.2 NVMe SSD (500GB)", 3),
+    Storage("High-Capacity HDD (10TB)", 10),
   ];
 
   @override
@@ -90,15 +92,14 @@ class Motherboard {
   final String model;
   final int wattage;
 
-  Motherboard({
-    required this.model,
-    required this.wattage,
-  });
+  Motherboard(this.model, this.wattage);
 
   static List<Motherboard> models = [
-    Motherboard(model: "B550 ATX", wattage: 25),
-    Motherboard(model: "X570 Gaming", wattage: 35),
-    Motherboard(model: "Z690 Premium", wattage: 45),
+    Motherboard("ASUS ROG Zenith II Extreme Alpha", 180),
+    Motherboard("ASUS ROG Rampage VI Extreme Encore", 200),
+    Motherboard("ASRock TRX40 Creator", 220),
+    Motherboard("ASUS ROG Maximus XIII Hero", 150),
+    Motherboard("Gigabyte TRX40 AORUS XTREME", 230),
   ];
 
   @override
@@ -106,4 +107,3 @@ class Motherboard {
     return model;
   }
 }
-

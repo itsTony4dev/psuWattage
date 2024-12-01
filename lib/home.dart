@@ -19,7 +19,11 @@ class _HomeState extends State<Home> {
 
   void showTotal() {
     setState(() {
-      result = ((cpuWattage + gpuWattage + ramWattage + storageWattage + motherboardWattage) * 1.2).ceil();
+      result = (cpuWattage +
+          gpuWattage +
+          ramWattage +
+          storageWattage +
+          motherboardWattage);
     });
   }
 
@@ -30,7 +34,10 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: const Text(
           'PSU Wattage Calculator',
-          style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, ),
+          style: TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+          ),
         ),
         centerTitle: true,
         toolbarHeight: 80,
@@ -113,7 +120,8 @@ class _HomeState extends State<Home> {
             ElevatedButton(
               onPressed: showTotal,
               style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 20),
                 backgroundColor: const Color(0xFF01c28d),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
@@ -121,9 +129,12 @@ class _HomeState extends State<Home> {
               ),
               child: const Text(
                 'Calculate Total Wattage',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            )
           ],
         ),
       ),
@@ -172,7 +183,10 @@ class _HomeState extends State<Home> {
             const Divider(height: 32, thickness: 1),
             Text(
               'Total: $result W',
-              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
+              style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.green),
             ),
           ],
         ),
