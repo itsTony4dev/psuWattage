@@ -119,10 +119,6 @@ class _HomeState extends State<Home> {
             _buildResultCard(),
             const SizedBox(height: 16),
             const SizedBox(height: 16),
-            // Text(
-            //   'Recommended PSU: ${recommendPSU(result)}W',
-            //   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
-            // ),
             RecommendedPSUCard(totalWattage: result),
             const SizedBox(height: 16),
             ElevatedButton(
@@ -143,7 +139,6 @@ class _HomeState extends State<Home> {
             const SizedBox(
               height: 20,
             ),
-            
           ],
         ),
       ),

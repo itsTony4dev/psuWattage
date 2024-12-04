@@ -8,14 +8,28 @@ class RecommendedPSUCard extends StatelessWidget {
   int recommendPSU(int totalWattage) {
     double requiredWattage = totalWattage * 1.3;
 
-    List<int> psuWattages = [300, 400, 500, 600, 700, 750, 850, 1000, 1200];
+    List<int> psuWattages = [
+      0,
+      300,
+      400,
+      450,
+      500,
+      550,
+      600,
+      650,
+      700,
+      750,
+      850,
+      1000,
+      1200
+    ];
 
     for (int wattage in psuWattages) {
       if (wattage >= requiredWattage) {
         return wattage;
       }
     }
-    return psuWattages.last; // Default to the highest PSU wattage available
+    return psuWattages.last;
   }
 
   @override
