@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/dropdown.dart';
 import 'package:project1/parts.dart';
+import 'recommendation.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -30,7 +31,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200], // Light background for contrast
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: const Text(
           'PSU Wattage Calculator',
@@ -117,6 +118,13 @@ class _HomeState extends State<Home> {
             const SizedBox(height: 32),
             _buildResultCard(),
             const SizedBox(height: 16),
+            const SizedBox(height: 16),
+            // Text(
+            //   'Recommended PSU: ${recommendPSU(result)}W',
+            //   style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.green),
+            // ),
+            RecommendedPSUCard(totalWattage: result),
+            const SizedBox(height: 16),
             ElevatedButton(
               onPressed: showTotal,
               style: ElevatedButton.styleFrom(
@@ -134,7 +142,8 @@ class _HomeState extends State<Home> {
             ),
             const SizedBox(
               height: 20,
-            )
+            ),
+            
           ],
         ),
       ),
@@ -182,7 +191,7 @@ class _HomeState extends State<Home> {
             Text('Storage: $storageWattage W'),
             const Divider(height: 32, thickness: 1),
             Text(
-              'Total: $result W',
+              'Estimated Power: $result W',
               style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
