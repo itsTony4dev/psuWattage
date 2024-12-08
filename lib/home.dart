@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               child: const Text(
-                'Calculate Total Wattage',
+                'Recommended PSU,
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
