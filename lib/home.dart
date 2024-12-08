@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: const Text(
-          'PSU Wattage Calculator',
+          'PSU Recommendation,
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               child: const Text(
-                'Recommended PSU,
+                'Recommend PSU,
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
