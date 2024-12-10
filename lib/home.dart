@@ -34,7 +34,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: const Text(
-          'PSU Recommendation,
+          'PSU Recommendation',
           style: TextStyle(
             fontSize: 28,
             fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               child: const Text(
-                'Recommend PSU,
+                'Recommend PSU',
                 style: TextStyle(fontSize: 18, color: Colors.black),
               ),
             ),
@@ -154,9 +154,14 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              title,
-              style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            Row(
+              children: [
+                const SizedBox(width: 50,),
+                Text(
+                  title,
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                )
+              ],
             ),
             const SizedBox(height: 12),
             child,
