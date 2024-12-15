@@ -1,12 +1,8 @@
 class CPU {
-  String _model;
-  int _wattage;
+  String model;
+  int wattage;
 
-  CPU(this._model, this._wattage);
-
-  int get wattage => _wattage;
-
-  String get model => _model;
+  CPU(this.model, this.wattage);
 
   @override
   String toString() {
