@@ -3,7 +3,7 @@ import 'package:project1/parts.dart';
 
 class MyDropdownMenu<T> extends StatefulWidget {
   final List<T> items;
-  final Function(T) updateSelection; // More generic name
+  final Function(T) updateSelection;
 
   const MyDropdownMenu({
     super.key,
